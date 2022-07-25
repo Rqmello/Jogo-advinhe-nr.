@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacao"
+    app:startDestination="@id/primFragm">
+
+    <fragment
+        android:id="@+id/primFragm"
+        android:name="com.example.jogo.PrimFragm"
+        android:label="fragment_prim"
+        tools:layout="@layout/fragment_prim" >
+        <action
+            android:id="@+id/action_primFragm_to_segFragm"
+            app:destination="@id/segFragm" />
+        <action
+            android:id="@+id/action_primFragm_to_tercFragm"
+            app:destination="@id/tercFragm" />
+        <action
+            android:id="@+id/action_primFragm_to_quarFragm"
+            app:destination="@id/quarFragm" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/segFragm"
+        android:name="com.example.jogo.SegFragm"
+        android:label="fragment_seg"
+        tools:layout="@layout/fragment_seg" >
+        <action
+            android:id="@+id/action_segFragm_to_primFragm"
+            app:destination="@id/primFragm" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tercFragm"
+        android:name="com.example.jogo.TercFragm"
+        android:label="fragment_terc"
+        tools:layout="@layout/fragment_terc" >
+        <action
+            android:id="@+id/action_tercFragm_to_primFragm"
+            app:destination="@id/primFragm" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quarFragm"
+        android:name="com.example.jogo.QuarFragm"
+        android:label="fragment_quar"
+        tools:layout="@layout/fragment_quar" >
+        <action
+            android:id="@+id/action_quarFragm_to_primFragm"
+            app:destination="@id/primFragm" />
+    </fragment>
+
+</navigation>
